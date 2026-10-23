@@ -4,7 +4,10 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "observability": { "enabled": true },
+  // Served only at agenttunnel.dev: no *.workers.dev URL and no preview URLs.
   "routes": [{ "pattern": "agenttunnel.dev", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false,
   "d1_databases": [
     {
       "binding": "DB",
