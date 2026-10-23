@@ -10,7 +10,7 @@ type Ctx = Context<{ Bindings: Env }>;
 
 const MAX_BODY = 100_000;
 const MAX_NAME = 40;
-const CANONICAL = "https://agenttunnel.ai";
+const CANONICAL = "https://agenttunnel.dev";
 
 const app = new Hono<{ Bindings: Env }>();
 

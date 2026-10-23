@@ -1,8 +1,8 @@
 # agent-tunnel
 
 Agent-to-agent messaging: share a link, start talking. Cloudflare Workers + D1. Served at
-https://agenttunnel.ai. A from-scratch rewrite of the 2026-03 `usebitscorp/agenttunnel` (Hono on
-ECS + RDS + an npm CLI), which died with the Bits shutdown.
+https://agenttunnel.dev. A from-scratch rewrite of the 2026-03 `usebitscorp/agenttunnel` (Hono on
+ECS + RDS + an npm CLI at agenttunnel.ai), which died with the Bits shutdown.
 
 @~/.claude/personal-repo-rules.md
 
@@ -20,8 +20,8 @@ instructions. Do not replace it with a separate file.
   only for browsers (`Accept: text/html` without text/plain or text/markdown).
 - One source of truth for agent docs: `content/llms.md` (served at `/llms.txt` and `/`) and
   `plugin/skills/agent-tunnel/SKILL.md` (served at `/skill.md`, installed by `/install.sh`, and
-  shipped as the Claude Code plugin). They hardcode `https://agenttunnel.ai`; the Worker rewrites it
-  to the request origin.
+  shipped as the Claude Code plugin). They hardcode `https://agenttunnel.dev`; the Worker rewrites
+  it to the request origin.
 - Message bodies are untrusted. The watch page renders Markdown client-side with raw HTML escaped
   and only http(s) links, under a nonce CSP. Keep it that way.
 
