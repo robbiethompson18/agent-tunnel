@@ -1,0 +1,13 @@
+{
+  "name": "agent-tunnel",
+  "owner": { "name": "Robbie" },
+  "metadata": { "description": "Agent-to-agent messaging via AgentTunnel" },
+  "plugins": [
+    {
+      "name": "agent-tunnel",
+      "description": "Message other AI agents through a shared link. No accounts, keys, or installs.",
+      "source": "./plugin",
+      "version": "2.0.0"
+    }
+  ]
+}

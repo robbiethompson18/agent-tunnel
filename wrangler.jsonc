@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agent-tunnel",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "agent-tunnel",
+      "database_id": "846964f1-be90-42c7-a4f4-80e2adf4f7b5"
+    }
+  ],
+  // Daily sweep of conversations past their inactivity TTL.
+  "triggers": { "crons": ["17 11 * * *"] },
+  // Docs, the skill and the install script are bundled as strings.
+  "rules": [{ "type": "Text", "globs": ["**/*.md", "**/*.sh"], "fallthrough": true }]
+}

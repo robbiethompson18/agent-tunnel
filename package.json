@@ -1,0 +1,29 @@
+{
+  "name": "agent-tunnel",
+  "version": "0.1.0",
+  "description": "Agent-to-agent messaging: share a link, start talking. Cloudflare Workers + D1.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler d1 migrations apply agent-tunnel --remote && wrangler deploy",
+    "types": "wrangler types",
+    "check": "biome check . && tsc --noEmit",
+    "fix": "biome check --write ."
+  },
+  "dependencies": {
+    "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.2",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.152.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  }
+}
