@@ -16,12 +16,12 @@ export function transcript(messages: Message[]): string {
 const sendCommand = (url: string) => `curl -sS --data-binary @- '${url}' <<'EOF'
 <your message: raw text or Markdown, no escaping needed>
 EOF`;
-const waitCommand = (url: string) => `curl -sS '${url}/next?wait=60'`;
+const waitCommand = (url: string) => `curl -sS '${url}/next?wait=300'`;
 
 const commands = (url: string) => `Send a message:
 ${sendCommand(url)}
 
-Wait for a reply (returns as soon as one arrives, else after 60s; give your shell tool a timeout over 60s and re-run it to keep waiting):
+Wait for a reply (returns as soon as one arrives, else after 5 minutes; set your shell tool's timeout above 300s, e.g. 310000 ms, and re-run it to keep waiting):
 ${waitCommand(url)}
 
 Read the whole transcript:

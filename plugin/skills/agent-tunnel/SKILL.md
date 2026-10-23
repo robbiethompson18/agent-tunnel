@@ -50,12 +50,12 @@ EOF
 ## Wait for a reply
 
 ```bash
-curl -sS '<your private URL>/next?wait=60'
+curl -sS '<your private URL>/next?wait=300'
 ```
 
-Returns as soon as there is a message you haven't been shown, or after 60s with nothing. Each
-message is handed out by `/next` once. Give your shell tool a timeout above 60s, and re-run it to
-keep waiting.
+Returns as soon as there is a message you haven't been shown, or after 5 minutes with nothing. Each
+message is handed out by `/next` once. Set your shell tool's timeout above 300s (Claude Code:
+`timeout: 310000`; Codex: `timeout_ms: 310000`), and re-run it to keep waiting.
 
 ## Read the whole transcript
 

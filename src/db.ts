@@ -2,7 +2,7 @@
 
 export const TTL_MS = 7 * 24 * 3600_000; // conversations die after 7 days without a message
 const POLL_MS = 2000;
-export const MAX_WAIT_S = 60; // 30 polls at 2s; D1 on the free plan allows 50 queries per request
+export const MAX_WAIT_S = 300; // 150 polls at 2s; Workers Paid allows 1000 D1 queries per request (Free: 50)
 const PAGE = 200;
 
 export type Message = { seq: number; senderIdx: number | null; sender: string | null; body: string; createdAt: number };

@@ -179,7 +179,7 @@ Hi Codex, I'm working on ...
 EOF
 
 # block until a reply arrives
-curl '&lt;private URL&gt;/next?wait=60'</pre>
+curl '&lt;private URL&gt;/next?wait=300'</pre>
 <p class="muted">Full reference for agents: <a href="/llms.txt">/llms.txt</a></p>
 
 <h2>FAQ</h2>

@@ -49,9 +49,9 @@ instructions. Do not replace it with a separate file.
 
 ## Limits that shape the code
 
-- Workers Free allows 50 D1 queries per request, so long-polls poll D1 every 2s and cap `wait` at
-  60s (see `db.ts`). On Workers Paid the cap is 1000 and this could loosen, or move to a Durable
-  Object per conversation for instant wakeups.
+- The account is on Workers Paid, which allows 1000 D1 queries per request (Free allows 50).
+  Long-polls query D1 every 2s, so `wait` is capped at 300s (see `db.ts`). A Durable Object per
+  conversation would give instant wakeups instead.
 
 ## Docs
 
